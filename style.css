@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    background: url(https://beolin.club/uploads/posts/2022-09/1664563411_1-beolin-club-p-risunok-galaktiki-i-zvezd-oboi-1.jpg);
+    background-size: auto;
+    background-position: center;
+}
+
+
+
+.display-none {
+    display: none;
+}
+
+.header {
+    min-height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.logo {
+    background: url(https://cs8.pikabu.ru/images/big_size_comm/2016-02_3/145526336714858404.png) no-repeat;
+    background-size: 25rem;
+    background-position: center;
+    min-height: 20px;
+    width: 60%;
+    outline: none;
+}
+
+.logo:hover {
+    -webkit-animation: vibrate-1 0.3s linear infinite both;
+    animation: vibrate-1 0.3s linear infinite both;
+}
+
+@-webkit-keyframes vibrate-1 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    20% {
+        -webkit-transform: translate(-5px, 5px);
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+@keyframes vibrate-1 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.characterContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.characterContainer:hover, 
+.locationContainer:hover{
+    -webkit-animation: kenburns-left .7s ease-in;
+	        animation: kenburns-left .5s ease-out both;
+}
+
+
+ @-webkit-keyframes kenburns-left {
+    0% {
+      -webkit-transform: scale(1) translate(0, 0);
+              transform: scale(1) translate(0, 0);
+      -webkit-transform-origin: 6% 10%;
+              transform-origin: 6% 10%;
+    }
+    100% {
+      -webkit-transform: scale(1.15) translate(-20px, 15px);
+              transform: scale(1.15) translate(-20px, 15px);
+      -webkit-transform-origin: left;
+              transform-origin: left;
+    }
+  }
+  @keyframes kenburns-left {
+    0% {
+      -webkit-transform: scale(1) translate(0, 0);
+              transform: scale(1) translate(0, 0);
+      -webkit-transform-origin: 16% 100%;
+              transform-origin: 16% 200%;
+    }
+    100% {
+      -webkit-transform: scale(1.15) translate(-10px, 15px);
+              transform: scale(1.15) translate(-20px, 15px);
+      -webkit-transform-origin: left;
+              transform-origin: left;
+    }
+  }
+  
+
+.residentsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: first baseline;
+
+}
+
+.residents {
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.locationContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    border: 1px solid gray;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    width: 30%;
+}
+
+.showAllButton {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 50%;
+    padding: 5px 10px;
+
+}
+
+
+
+.img-loading {
+    margin: 50px auto;
+    height: 300px;
+    width: 300px;
+    animation: rotate 1.5s linear infinite;
+    display: none;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.error-message {
+    font-family: cursive;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #00e1ff;
+    margin: 0 auto;
+    -webkit-animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-6-20 14:37:17
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation shake-bottom
+ * ----------------------------------------
+ */
+ @-webkit-keyframes shake-bottom {
+    0%,
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+    }
+    10% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: rotate(-4deg);
+              transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+      -webkit-transform: rotate(4deg);
+              transform: rotate(4deg);
+    }
+    80% {
+      -webkit-transform: rotate(-2deg);
+              transform: rotate(-2deg);
+    }
+    90% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+  }
+  @keyframes shake-bottom {
+    0%,
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+    }
+    10% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: rotate(-4deg);
+              transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+      -webkit-transform: rotate(4deg);
+              transform: rotate(4deg);
+    }
+    80% {
+      -webkit-transform: rotate(-2deg);
+              transform: rotate(-2deg);
+    }
+    90% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+  }
+  
+  
+
+
+.btn {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 5px 10px;
+    width: 200px;
+    margin: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    outline: 3px solid #00e1ff;
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
+.btn-controlls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aquamarine;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search {
+    border-radius: 10px;
+    padding: 5px;
+    color: black;
+}
+
+.item {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.description {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
